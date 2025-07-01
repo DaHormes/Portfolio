@@ -24,23 +24,29 @@
                 placeholder="gideon@example.com"
                 required
             />
-            <Radio
-            color="gray"
-            name="type"
-            label="Design"
-            defaultChecked
-            />
-            <Radio color="gray" name="interest" label="Development" />
-            <Radio color="gray" name="interest" label="Support" />
-            <Radio color="gray" name="interest" label="Other" />
-                
+            <label>
+            <input type="radio" name="interest" value="Design" checked />
+            Design
+            </label>
+            <label>
+            <input type="radio" name="interest" value="Development" />
+            Development
+            </label>
+            <label>
+            <input type="radio" name="interest" value="Support" />
+            Support
+            </label>
+            <label>
+            <input type="radio" name="interest" value="Other" />
+            Other
+            </label>
+  
             <textarea
                 id="message"
                 name="message"
                 placeholder="Tell me about your project..."
                 required
-            >
-            </textarea>
+            ></textarea>
             <button
                 type="submit"
                 size="lg"
