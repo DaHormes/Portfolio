@@ -93,7 +93,12 @@ export function ContactForm() {
               </div>
             </div>
             <div className="w-full mt-8 md:mt-0 md:px-10 col-span-4 h-full p-5">
-              <form action="#">
+              <form 
+                name="contact"
+                method="POST"
+                data-netlify="true"
+                >
+                  <input type="hidden" name="form-name" value="contact" />
                 <div className="mb-8 grid gap-4 lg:grid-cols-2">
                   {/* @ts-ignore */}
                   <Input
