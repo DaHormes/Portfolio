@@ -1,13 +1,12 @@
 {
-  "name": "nextjs-tailwind-portfolio-page",
+  "name": "gidy-portfolio",
   "version": "1.0.0",
   "private": true,
-  "author": "Creative Tim",
-  "license": "See license in https://www.creative-tim.com/license",
-  "homepage": "https://github.com/themewagon/Next.js-Tailwind-CSS-Portfolio-Template",
+  "author": "DaHormes Design Studio",
+  "homepage": "#",
   "scripts": {
     "dev": "next dev -p 3006",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "next start -p 3006",
     "lint": "next lint",
     "predeploy": "npm run build",
