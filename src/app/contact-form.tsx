@@ -13,6 +13,33 @@ import {
 import { EnvelopeIcon, PhoneIcon, TicketIcon } from "@heroicons/react/24/solid";
 
 export function ContactForm() {
+
+  //Form handling
+  const handleFormSubmit = async (event) => {
+    event.preventDefault(); // Prevent default form submission behavior
+  
+    // Extract form data
+    const formData = new FormData(event.target);
+  
+    try {
+      // Send the form data to Netlify
+      await fetch("forms.html", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData).toString(),
+      });
+  
+      // Show success message
+      alert("Message sent. Thanks, I will be reaching out to you!");
+  
+      // Clear the form fields
+      event.target.reset();
+    } catch (error) {
+      // Show error message
+      alert("Oops! Something went wrong. Please try again later.");
+    }
+  };
+
   return (
     <section className="px-8 py-16 scroll-smooth" id="contact">
       <div className="container mx-auto mb-20 text-center">
@@ -97,6 +124,7 @@ export function ContactForm() {
                 name="contact"
                 method="POST"
                 data-netlify="true"
+                onSubmit={handleFormSubmit}
                 >
                   <input type="hidden" name="form-name" value="contact" />
                 <div className="mb-8 grid gap-4 lg:grid-cols-2">
@@ -106,7 +134,8 @@ export function ContactForm() {
                     size="lg"
                     variant="static"
                     label="First Name"
-                    name="firstName"
+                    id="first-name"
+                    name="first-name"
                     required
                     placeholder="eg. Gideon"
                     containerProps={{
@@ -119,7 +148,8 @@ export function ContactForm() {
                     size="lg"
                     variant="static"
                     label="Last Name"
-                    name="lastName"
+                    id="last-name"
+                    name="last-name"
                     required
                     placeholder="eg. Mark"
                     containerProps={{
@@ -134,6 +164,7 @@ export function ContactForm() {
                   variant="static"
                   type="email"
                   label="Email"
+                  id="email"
                   name="email"
                   required
                   placeholder="eg. gideon@mail.com"
@@ -169,6 +200,7 @@ export function ContactForm() {
                   variant="static"
                   label="Your Message"
                   placeholder="Kindly let me know about the project. Tell me as much details as Ok."
+                  id="message"
                   name="message"
                   containerProps={{
                     className: "!min-w-full mb-8",
