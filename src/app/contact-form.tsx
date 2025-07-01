@@ -1,5 +1,7 @@
 "use client";
 
+import React from 'react';
+
 import {
   Typography,
   Card,
@@ -12,10 +14,11 @@ import {
 } from "@material-tailwind/react";
 import { EnvelopeIcon, PhoneIcon, TicketIcon } from "@heroicons/react/24/solid";
 
+
 export function ContactForm() {
 
   //Form handling
-  const handleFormSubmit = async (event) => {
+  const handleFormSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault(); // Prevent default form submission behavior
   
     // Extract form data
@@ -26,7 +29,7 @@ export function ContactForm() {
       await fetch("forms.html", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData).toString(),
+        body: new URLSearchParams(formData as any).toString(),
       });
   
       // Show success message
