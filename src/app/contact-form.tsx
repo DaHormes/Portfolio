@@ -22,7 +22,8 @@ export function ContactForm() {
     event.preventDefault(); // Prevent default form submission behavior
   
     // Extract form data
-    const formData = new FormData(event.target);
+    const form = event.target as HTMLFormElement;
+    const formData = new FormData(form);
   
     try {
       // Send the form data to Netlify
@@ -36,7 +37,7 @@ export function ContactForm() {
       alert("Message sent. Thanks, I will be reaching out to you!");
   
       // Clear the form fields
-      event.target.reset();
+      form.reset();
     } catch (error) {
       // Show error message
       alert("Oops! Something went wrong. Please try again later.");
