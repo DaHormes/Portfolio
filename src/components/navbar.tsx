@@ -17,17 +17,19 @@ import {
 
 const NAV_MENU = [
   {
-    name: "Page",
-    icon: RectangleStackIcon,
-  },
-  {
-    name: "Account",
-    icon: UserCircleIcon,
-  },
-  {
-    name: "Docs",
+    name: "Services",
     icon: CommandLineIcon,
-    href: "#",
+    href: "#services",
+  },
+  {
+    name: "Projects",
+    icon: RectangleStackIcon,
+    href: "#projects"
+  },
+  {
+    name: "Profile",
+    icon: UserCircleIcon,
+    href: "#resume"
   },
 ];
 
@@ -42,7 +44,6 @@ function NavItem({ children, href }: NavItemProps) {
       <Typography
         as="a"
         href={href || "#"}
-        target={href ? "_blank" : "_self"}
         variant="paragraph"
         color="gray"
         className="flex items-center gap-2 font-medium text-gray-900"
@@ -52,7 +53,7 @@ function NavItem({ children, href }: NavItemProps) {
     </li>
   );
 }
-
+ 
 export function Navbar() {
   const [open, setOpen] = React.useState(false);
 
@@ -68,9 +69,11 @@ export function Navbar() {
   return (
     <MTNavbar shadow={false} fullWidth className="border-0 sticky top-0 z-50">
       <div className="container mx-auto flex items-center justify-between">
-        <Typography color="blue-gray" className="text-lg font-bold">
-          Material Tailwind
-        </Typography>
+        <a href="/" >
+          <Typography color="blue-gray" className="text-lg font-bold">
+            Gideon Chukwunalu
+          </Typography>
+        </a>
         <ul className="ml-10 hidden items-center gap-8 lg:flex">
           {NAV_MENU.map(({ name, icon: Icon, href }) => (
             <NavItem key={name} href={href}>
@@ -80,9 +83,8 @@ export function Navbar() {
           ))}
         </ul>
         <div className="hidden items-center gap-2 lg:flex">
-          <Button variant="text">Sign In</Button>
-          <a href="#">
-            <Button color="gray">blocks</Button>
+          <a href="#contact">
+            <Button color="gray">Connect with Me</Button>
           </a>
         </div>
         <IconButton
@@ -109,10 +111,9 @@ export function Navbar() {
             ))}
           </ul>
           <div className="mt-6 mb-4 flex items-center gap-2">
-            <Button variant="text">Sign In</Button>
-            <a href="#">
-              <Button color="gray">blocks</Button>
-            </a>
+            <a href="#contact">
+            <Button color="gray">Connect with Me</Button>
+          </a>
           </div>
         </div>
       </Collapse>
