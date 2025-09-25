@@ -6,6 +6,26 @@ import { getImagePrefix } from "../../utils/utils";
 
 const PROJECTS = [
   {
+    img: `${getImagePrefix()}image/astro1.png`,
+    title: "AstroNote, SaaS website",
+    desc: "A SaaS website, for an instant sync cloud Notes product/service.  .",
+    additionalImages: [
+      `${getImagePrefix()}image/astro1.png`,
+      `${getImagePrefix()}image/astro2.png`,
+    ],
+    features: [
+      "Responsive design",
+      "Clear Minimalist design",
+      "Product Overview section",
+      "Blog section",
+      "Fast load times",
+      "User Reviews/Testimonials",
+      "Intuitive Pricing model",
+    ],
+    liveLink: "https://dahsample2.hstn.me",
+    technologies: ["WordPress", "ProElement", "Elementor", "Custom Styling", "Ultimate Header & Footer", ],
+  },
+  {
     img: `${getImagePrefix()}image/falcus1.png`,
     title: "FalcusMedia Ltd",
     desc: "A company portfolio and Client management system for an Account Manager of various content creators.",
@@ -27,26 +47,6 @@ const PROJECTS = [
     ],
     liveLink: "https://falcusmedia.com",
     technologies: ["WordPress", "Advanved Custom Field, ACF", "PHP", "JavaScript/HTML/CSS", "ProElement", "Custom Theme/Plugin Modification", "Ultimate Member","...", ],
-  },
-  {
-    img: `${getImagePrefix()}image/astro1.png`,
-    title: "AstroNote, SaaS website",
-    desc: "A SaaS website, for an instant sync cloud Notes product/service.  .",
-    additionalImages: [
-      `${getImagePrefix()}image/astro1.png`,
-      `${getImagePrefix()}image/astro2.png`,
-    ],
-    features: [
-      "Responsive design",
-      "Clear Minimalist design",
-      "Product Overview section",
-      "Blog section",
-      "Fast load times",
-      "User Reviews/Testimonials",
-      "Intuitive Pricing model",
-    ],
-    liveLink: "https://dahsample2.hstn.me",
-    technologies: ["WordPress", "ProElement", "Elementor", "Custom Styling", "Ultimate Header & Footer", ],
   },
   {
     img: `${getImagePrefix()}image/digi1.png`,
@@ -86,6 +86,44 @@ const PROJECTS = [
     ],
     liveLink: "http://dahsample3.hstn.me",
     technologies: ["WordPress", "ProElement", "Elementor", "Accordion Edit", "Ultimate Header & Footer", ],
+  },
+  {
+    img: `${getImagePrefix()}image/chido1.png`,
+    title: "CHIDOREK, A wedding website",
+    desc: "A Wedding website. Celebrating love and commitment #CHIDOREK2025..  .",
+    additionalImages: [
+      `${getImagePrefix()}image/chido2.png`,
+      `${getImagePrefix()}image/chido3.png`,
+    ],
+    features: [
+      "Responsive design",
+      "Clear Minimalist design",
+      "Intuitive RSVP section",
+      "'Our Moments' - Photo Gallery",
+      "CLear Registry/Gifting section",
+      "D-Day Timer CountDown",
+      "FAQs section",
+    ],
+    liveLink: "https://www.chidorek.love/",
+    technologies: ["React", "Tailwind", "Netlify Form", "Cursor ai", ],
+  },
+  {
+    img: `${getImagePrefix()}image/voxed1.png`,
+    title: "VoxEd, EdTech website",
+    desc: "An EdTech website, for an AI-Powered translation SaaS Bridging Language Barriers in Education - Transforming Education with AI-Powered Translation.",
+    additionalImages: [
+      `${getImagePrefix()}image/voxed2.png`,
+      `${getImagePrefix()}image/voxed3.png`,
+    ],
+    features: [
+      "Responsive design",
+      "Clear Minimalist design",
+      "Landing page Overview",
+      "Intuitive User DashBoard",
+      "Interactive File Upload",
+    ],
+    liveLink: "https://dahormes-edtech.netlify.app/",
+    technologies: ["React", "Tailwind", ],
   }
 ];
 
